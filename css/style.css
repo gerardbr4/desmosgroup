@@ -223,16 +223,28 @@ body {
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #0A1E1E 0%, #163838 50%, #1A4040 80%, #163838 100%);
+  /* 1) Imatge de fons */
+  background-image: url('../img/hero.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   z-index: 0;
 }
+/* 2) Capa color verd característic */
+.hero__bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 56, 56, 0.78);
+}
+/* 3) Grid daurat per sobre */
 .hero__bg::after {
   content: '';
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(196,146,42,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(196,146,42,0.035) 1px, transparent 1px);
+    linear-gradient(rgba(196,146,42,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196,146,42,0.045) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 .hero::after {
