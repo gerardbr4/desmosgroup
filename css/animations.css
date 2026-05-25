@@ -54,53 +54,67 @@
   border-bottom: 1px solid var(--border);
   overflow: hidden;
   position: relative;
-  padding-block: 1.1rem;
+  padding-block: 1.25rem;
 }
-/* Fade edges */
+/* Fade edges — hide the loop seam */
 .marquee-strip::before,
 .marquee-strip::after {
   content: '';
   position: absolute;
   top: 0; bottom: 0;
-  width: 12%;
+  width: 8%;
   z-index: 2;
   pointer-events: none;
 }
 .marquee-strip::before {
   left: 0;
-  background: linear-gradient(to right, var(--bg-darker), transparent);
+  background: linear-gradient(to right, var(--bg-darker) 0%, transparent 100%);
 }
 .marquee-strip::after {
   right: 0;
-  background: linear-gradient(to left, var(--bg-darker), transparent);
+  background: linear-gradient(to left, var(--bg-darker) 0%, transparent 100%);
 }
 
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marqueeScroll 28s linear infinite;
+  animation: marqueeScroll 36s linear infinite;
 }
 .marquee-track:hover { animation-play-state: paused; }
 
+/*
+  padding-right = gap: garanteix que l'espai al join entre les dues còpies
+  és idèntic a l'espai entre els ítems dins de cada còpia → loop invisible.
+*/
 .marquee-content {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  padding-inline: 1.5rem;
-  white-space: nowrap;
+  gap: 1rem;
+  padding-right: 1rem;
 }
+
 .marquee-item {
-  font-family: var(--font-heading);
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
   font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.5rem;
+  border-radius: 100px;
+  white-space: nowrap;
   line-height: 1;
 }
-.marquee-item--odd  { color: var(--text-lt); }
-.marquee-item--even { color: var(--accent); }
-.marquee-sep {
-  color: var(--border);
-  font-size: 1.1rem;
-  flex-shrink: 0;
+/* Fill 100% — fons sòlid, text fosc */
+.marquee-item--fill {
+  background: var(--text-lt);
+  color: var(--bg-darker);
+  border: 2px solid var(--text-lt);
+}
+/* Border 100% — transparent, vora visible */
+.marquee-item--outline {
+  background: transparent;
+  color: var(--text-lt);
+  border: 2px solid rgba(245, 243, 238, 0.35);
 }
 
 /* === REDUCED MOTION === */
