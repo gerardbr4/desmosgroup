@@ -74,6 +74,18 @@ function renderPortfolio() {
 }
 renderPortfolio();
 
+// Spotlight border en portfolio cards
+const portfolioGrid = document.getElementById('portfolio-grid');
+if (portfolioGrid) {
+  portfolioGrid.addEventListener('mousemove', e => {
+    const card = e.target.closest('.portfolio-card');
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+    card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+  });
+}
+
 // Any actual al footer
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
