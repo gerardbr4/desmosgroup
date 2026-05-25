@@ -36,10 +36,10 @@
   }
   </script>
 
-  <!-- Fonts: Cormorant Garamond (titulars) + DM Sans (cos) -->
+  <!-- Fonts: Playfair Display (titulars) + DM Sans (cos) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
@@ -75,7 +75,6 @@
     <section class="hero" id="inicio" aria-label="Portada">
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="container hero__inner">
-
         <div class="hero__text">
           <p class="hero__eyebrow reveal">Firma independiente · Adquisición de empresas en España</p>
           <h1 class="hero__title reveal">La empresa que construiste merece un futuro a su altura.</h1>
@@ -88,24 +87,6 @@
             <a href="#quienes-somos" class="btn btn--outline">Conocer Desmos</a>
           </div>
         </div>
-
-        <div class="hero__metrics reveal" aria-hidden="true">
-          <div class="hero__metric">
-            <span class="hero__metric-num">3</span>
-            <span class="hero__metric-label">Empresas participadas</span>
-          </div>
-          <div class="hero__metric-divider"></div>
-          <div class="hero__metric">
-            <span class="hero__metric-num">100%</span>
-            <span class="hero__metric-label">Capital propio</span>
-          </div>
-          <div class="hero__metric-divider"></div>
-          <div class="hero__metric">
-            <span class="hero__metric-num">2025</span>
-            <span class="hero__metric-label">Primera operación</span>
-          </div>
-        </div>
-
       </div>
       <div class="hero__scroll-indicator" aria-hidden="true"></div>
     </section>
@@ -222,6 +203,35 @@
     </section>
 
     <!-- ================================================
+         STATS BAR
+         ================================================ -->
+    <section class="stats-bar section--light" aria-label="Cifras clave">
+      <div class="container">
+        <div class="stats__inner">
+          <div class="stats__item">
+            <span class="stats__num">3</span>
+            <span class="stats__label">Empresas adquiridas</span>
+          </div>
+          <div class="stats__divider" aria-hidden="true"></div>
+          <div class="stats__item">
+            <span class="stats__num">100%</span>
+            <span class="stats__label">Capital propio</span>
+          </div>
+          <div class="stats__divider" aria-hidden="true"></div>
+          <div class="stats__item">
+            <span class="stats__num">0</span>
+            <span class="stats__label">Intermediarios</span>
+          </div>
+          <div class="stats__divider" aria-hidden="true"></div>
+          <div class="stats__item">
+            <span class="stats__num">+30%</span>
+            <span class="stats__label">Mejora en valoración con planificación</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
          EMPRESAS PARTICIPADAS — Credibilitat aviat
          ================================================ -->
     <section class="section section--dark" id="empresas">
@@ -254,7 +264,7 @@
         <div class="services__grid">
           <article class="service-card reveal">
             <div class="service-card__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
                 <polyline points="16 7 22 7 22 13"/>
@@ -265,10 +275,11 @@
               Compramos empresas rentables y consolidadas con vocación de continuidad.
               Operamos con capital propio, sin terceros y sin plazos de desinversión forzados.
             </p>
+            <a href="#contacto" class="service-card__more">Saber más →</a>
           </article>
           <article class="service-card reveal">
             <div class="service-card__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                 <polyline points="14 2 14 8 20 8"/>
@@ -281,10 +292,11 @@
               Acompañamos en procesos de compraventa en el lado comprador o vendedor,
               con criterio financiero y empresarial y sin conflictos de interés.
             </p>
+            <a href="#contacto" class="service-card__more">Saber más →</a>
           </article>
           <article class="service-card reveal">
             <div class="service-card__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="3"/>
                 <path d="M19.07 4.93l-1.41 1.41M5.34 18.66l-1.41 1.41M4.93 4.93l1.41 1.41M18.66 18.66l1.41 1.41M2 12H4M20 12h2M12 2v2M12 20v2"/>
@@ -295,10 +307,11 @@
               Diseñamos estructuras adaptadas a cada situación: compras totales o parciales,
               incorporación de socios, reestructuraciones y relevos planificados.
             </p>
+            <a href="#contacto" class="service-card__more">Saber más →</a>
           </article>
           <article class="service-card reveal">
             <div class="service-card__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="12" y1="1" x2="12" y2="23"/>
                 <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
@@ -309,6 +322,7 @@
               Integramos la visión financiera y personal del empresario en cada operación.
               El resultado de una vida de trabajo merece una solución a medida.
             </p>
+            <a href="#contacto" class="service-card__more">Saber más →</a>
           </article>
         </div>
       </div>
@@ -327,46 +341,70 @@
             tus objetivos, tu situación y el futuro que quieres para tu empresa.
           </p>
         </div>
-        <div class="process__timeline">
-          <article class="process__step reveal">
-            <div class="process__num" aria-hidden="true">01</div>
-            <div class="process__content">
+        <div class="process__list">
+          <article class="process__item reveal">
+            <div class="process__item-header">
+              <span class="process__num-sm">01</span>
               <h3 class="process__title">Análisis</h3>
-              <p class="process__desc">
-                Estudiamos la empresa en profundidad: su sector, situación financiera y
-                potencial antes de hacer ningún compromiso.
-              </p>
+              <div class="process__item-arrow" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+                </svg>
+              </div>
             </div>
+            <p class="process__desc">
+              Estudiamos la empresa en profundidad: su sector, situación financiera y
+              potencial antes de hacer ningún compromiso.
+            </p>
           </article>
-          <article class="process__step reveal">
-            <div class="process__num" aria-hidden="true">02</div>
-            <div class="process__content">
+          <article class="process__item reveal">
+            <div class="process__item-header">
+              <span class="process__num-sm">02</span>
               <h3 class="process__title">Estructuración</h3>
-              <p class="process__desc">
-                Definimos la estructura óptima de la operación, adaptada a los objetivos
-                del empresario y a la realidad del negocio.
-              </p>
+              <div class="process__item-arrow" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+                </svg>
+              </div>
             </div>
+            <p class="process__desc">
+              Definimos la estructura óptima de la operación, adaptada a los objetivos
+              del empresario y a la realidad del negocio.
+            </p>
           </article>
-          <article class="process__step reveal">
-            <div class="process__num" aria-hidden="true">03</div>
-            <div class="process__content">
+          <article class="process__item reveal">
+            <div class="process__item-header">
+              <span class="process__num-sm">03</span>
               <h3 class="process__title">Ejecución</h3>
-              <p class="process__desc">
-                Gestionamos el cierre con rigor, discreción y agilidad. Minimizamos la
-                incertidumbre para todas las partes implicadas.
-              </p>
+              <div class="process__item-arrow" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+                </svg>
+              </div>
             </div>
+            <p class="process__desc">
+              Gestionamos el cierre con rigor, discreció y agilidad. Minimizamos la
+              incertidumbre para todas las partes implicadas.
+            </p>
           </article>
-          <article class="process__step reveal">
-            <div class="process__num" aria-hidden="true">04</div>
-            <div class="process__content">
+          <article class="process__item reveal">
+            <div class="process__item-header">
+              <span class="process__num-sm">04</span>
               <h3 class="process__title">Acompañamiento</h3>
-              <p class="process__desc">
-                Nuestra relación no termina en el cierre. Acompañamos la transición
-                para asegurar la continuidad real del negocio.
-              </p>
+              <div class="process__item-arrow" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+                </svg>
+              </div>
             </div>
+            <p class="process__desc">
+              Nuestra relación no termina en el cierre. Acompañamos la transición
+              para asegurar la continuidad real del negocio.
+            </p>
           </article>
         </div>
       </div>
