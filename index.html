@@ -74,6 +74,7 @@
          ================================================ -->
     <section class="hero" id="inicio" aria-label="Portada">
       <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div class="hero__text">
           <p class="hero__eyebrow reveal">Firma independiente · Adquisición de empresas en España</p>
@@ -140,34 +141,58 @@
          ================================================ -->
     <section class="section section--darker" id="situacion">
       <div class="container">
-        <div class="section__header">
-          <p class="eyebrow reveal">¿Te suena familiar?</p>
-          <h2 class="section__title reveal">Muchos empresarios llegan a este punto.</h2>
-          <p class="section__lead reveal">No es un problema de negocio. Es la falta de un interlocutor de confianza.</p>
+        <div class="section__header section__header--center">
+          <p class="eyebrow eyebrow--lined reveal">¿Te suena familiar?</p>
+          <h2 class="section__title section__title--center reveal">Muchos empresarios<br>llegan a este punto.</h2>
+          <p class="section__lead section__lead--center reveal">No es un problema de negocio. Es la falta de un interlocutor de confianza.</p>
         </div>
 
         <div class="situation__grid">
-          <div class="situation__card reveal">
-            <span class="situation__quote" aria-hidden="true">"</span>
-            <p>Mis hijos no quieren —o no pueden— hacerse cargo de la empresa.</p>
-          </div>
-          <div class="situation__card reveal">
-            <span class="situation__quote" aria-hidden="true">"</span>
-            <p>He construido algo que vale, pero no sé a quién vendérselo ni cómo hacerlo.</p>
-          </div>
-          <div class="situation__card reveal">
-            <span class="situation__quote" aria-hidden="true">"</span>
-            <p>No quiero un fondo que compre hoy para vender en cinco años.</p>
-          </div>
-          <div class="situation__card reveal">
-            <span class="situation__quote" aria-hidden="true">"</span>
-            <p>Necesito discreción. No puedo permitirme que esto se sepa en el sector.</p>
-          </div>
+          <article class="situation__card reveal">
+            <div class="situation__body">
+              <div class="situation__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="situation__sep" aria-hidden="true"></div>
+              <p>Mis hijos no quieren —o no pueden— hacerse cargo de la empresa.</p>
+            </div>
+          </article>
+
+          <article class="situation__card reveal">
+            <div class="situation__body">
+              <div class="situation__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>
+              </div>
+              <div class="situation__sep" aria-hidden="true"></div>
+              <p>He construido algo que vale, pero no sé a quién vendérselo ni cómo hacerlo.</p>
+            </div>
+          </article>
+
+          <article class="situation__card reveal">
+            <div class="situation__body">
+              <div class="situation__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5a4.5 3.5 0 1 0 0 5"/><line x1="8" y1="11.5" x2="13.5" y2="11.5"/><line x1="8" y1="14" x2="11.5" y2="14"/></svg>
+              </div>
+              <div class="situation__sep" aria-hidden="true"></div>
+              <p>No quiero un fondo que compre hoy para vender en cinco años.</p>
+            </div>
+          </article>
+
+          <article class="situation__card reveal">
+            <div class="situation__body">
+              <div class="situation__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <div class="situation__sep" aria-hidden="true"></div>
+              <p>Necesito discreción. No puedo permitirme que esto se sepa en el sector.</p>
+            </div>
+          </article>
         </div>
 
         <div class="situation__close reveal">
+          <div class="situation__rule" aria-hidden="true"></div>
           <p>Si alguna de estas frases te resulta familiar, probablemente sea el momento de hablar.</p>
-          <a href="#contacto" class="btn btn--primary">Primera conversación, sin compromiso</a>
+          <a href="#contacto" class="btn btn--cta">Primera conversación, sin compromiso &nbsp;→</a>
         </div>
       </div>
     </section>
@@ -177,12 +202,13 @@
          ================================================ -->
     <section class="section section--light" id="quienes-somos">
       <div class="container">
-        <div class="about__grid">
 
-          <div class="about__text">
-            <p class="eyebrow reveal">Quiénes somos</p>
+        <div class="about__layout">
+          <!-- Left: content -->
+          <div class="about__content">
+            <p class="eyebrow eyebrow--bar reveal">Quiénes somos</p>
             <h2 class="section__title section__title--dark reveal">
-              No somos un asesor.<br>Somos el comprador.
+              No somos un asesor.<br><span class="about__title-accent">Somos el comprador.</span>
             </h2>
             <p class="section__body reveal">
               Desmos Group es una firma independiente especializada en la adquisición de empresas
@@ -190,88 +216,79 @@
             </p>
             <p class="section__body reveal">
               La diferencia importa: no cobramos por presentarte compradores. Nosotros somos el comprador.
-              Eso nos permite comprometernos de verdad con la continuidad del negocio que has
-              construido durante años.
+              Eso nos permite comprometernos de verdad con la continuidad del negocio que has construido durante años.
             </p>
-            <ul class="about__pillars reveal">
-              <li class="about__pillar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-                Firma independiente
-              </li>
-              <li class="about__pillar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-                </svg>
-                Visión de largo plazo
-              </li>
-              <li class="about__pillar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                </svg>
-                Procesos discretos
-              </li>
-              <li class="about__pillar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
-                Alineación con el empresario
-              </li>
-            </ul>
-          </div>
 
-          <div class="about__visual reveal" aria-hidden="true">
-            <div class="about__graphic">
-              <div class="about__graphic-inner">
-                <span class="about__graphic-label">Desde 2025</span>
-                <span class="about__graphic-number">3</span>
-                <span class="about__graphic-desc">empresas participadas</span>
+            <div class="about__features reveal">
+              <div class="about__feature">
+                <div class="about__feature-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <span>Firma independiente</span>
+              </div>
+              <div class="about__feature">
+                <div class="about__feature-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <span>Visión de largo plazo</span>
+              </div>
+              <div class="about__feature">
+                <div class="about__feature-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <span>Procesos discretos</span>
+              </div>
+              <div class="about__feature">
+                <div class="about__feature-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <span>Alineación con el empresario</span>
               </div>
             </div>
           </div>
 
-        </div>
-      </div>
-    </section>
+          <!-- Vertical divider -->
+          <div class="about__divider" aria-hidden="true"></div>
 
-    <!-- ================================================
-         STATS BAR
-         ================================================ -->
-    <section class="stats-bar section--light" aria-label="Cifras clave">
-      <div class="container">
-        <div class="stats__inner">
-          <div class="stats__item">
-            <span class="stats__num">3</span>
-            <span class="stats__label">Empresas adquiridas</span>
-          </div>
-          <div class="stats__divider" aria-hidden="true"></div>
-          <div class="stats__item">
-            <span class="stats__num">100%</span>
-            <span class="stats__label">Capital propio</span>
-          </div>
-          <div class="stats__divider" aria-hidden="true"></div>
-          <div class="stats__item">
-            <span class="stats__num">0</span>
-            <span class="stats__label">Intermediarios</span>
-          </div>
-          <div class="stats__divider" aria-hidden="true"></div>
-          <div class="stats__item">
-            <span class="stats__num">+30%</span>
-            <span class="stats__label">Mejora en valoración con planificación</span>
+          <!-- Right: KPIs grid -->
+          <div class="about__aside">
+            <div class="about__kpis reveal">
+              <div class="about__kpi">
+                <div class="about__kpi-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="2" width="7" height="20" rx="1"/><rect x="14" y="8" width="7" height="14" rx="1"/></svg>
+                </div>
+                <span class="about__kpi-num">3</span>
+                <div class="about__kpi-rule" aria-hidden="true"></div>
+                <span class="about__kpi-lbl">Empresas adquiridas</span>
+              </div>
+              <div class="about__kpi">
+                <div class="about__kpi-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5a4.5 3.5 0 1 0 0 5"/><line x1="8" y1="12" x2="13" y2="12"/><line x1="8" y1="14.5" x2="11" y2="14.5"/></svg>
+                </div>
+                <span class="about__kpi-num">100%</span>
+                <div class="about__kpi-rule" aria-hidden="true"></div>
+                <span class="about__kpi-lbl">Capital propio</span>
+              </div>
+              <div class="about__kpi">
+                <div class="about__kpi-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" y1="11" x2="23" y2="11"/></svg>
+                </div>
+                <span class="about__kpi-num">0</span>
+                <div class="about__kpi-rule" aria-hidden="true"></div>
+                <span class="about__kpi-lbl">Intermediarios</span>
+              </div>
+              <div class="about__kpi">
+                <div class="about__kpi-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                </div>
+                <span class="about__kpi-num">+30%</span>
+                <div class="about__kpi-rule" aria-hidden="true"></div>
+                <span class="about__kpi-lbl">Mejora en valoración con planificación</span>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -280,14 +297,15 @@
          ================================================ -->
     <section class="section section--dark" id="empresas">
       <div class="container">
-        <div class="section__header">
+        <div class="section__header section__header--center">
           <p class="eyebrow reveal">Empresas participadas</p>
-          <h2 class="section__title reveal">Track record real.</h2>
-          <p class="section__lead reveal">
+          <h2 class="section__title section__title--center reveal">Track record real.</h2>
+          <p class="section__lead section__lead--center reveal">
             No hablamos de operaciones hipotéticas. Estas son las empresas en las que hemos invertido
             con capital propio y en las que acompañamos la transición activamente.
           </p>
         </div>
+
         <div class="portfolio__grid" id="portfolio-grid" aria-label="Empresas participadas"></div>
       </div>
     </section>
@@ -375,82 +393,147 @@
     <!-- ================================================
          CÓMO TRABAJAMOS
          ================================================ -->
-    <section class="section section--dark" id="como-trabajamos">
+    <section class="section section--light" id="como-trabajamos">
       <div class="container">
-        <div class="section__header">
-          <p class="eyebrow reveal">Cómo trabajamos</p>
-          <h2 class="section__title reveal">Un proceso construido<br>para el empresario.</h2>
-          <p class="section__lead reveal">
+        <div class="section__header section__header--center">
+          <p class="process-eyebrow reveal">Cómo trabajamos</p>
+          <div class="process-eyebrow-rule reveal" aria-hidden="true"></div>
+          <h2 class="section__title section__title--dark section__title--center reveal">Un proceso construido para el empresario.</h2>
+          <p class="section__lead section__lead--dark section__lead--center reveal">
             Cada operación es diferente. Por eso empezamos siempre por escuchar:
             tus objetivos, tu situación y el futuro que quieres para tu empresa.
           </p>
         </div>
-        <div class="process__list">
-          <article class="process__item reveal">
-            <div class="process__item-header">
-              <span class="process__num-sm">01</span>
-              <h3 class="process__title">Análisis</h3>
-              <div class="process__item-arrow" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
-                </svg>
-              </div>
+
+        <div class="process__steps">
+          
+          <div class="process__step reveal">
+            <span class="process__step-num">01</span>
+            <div class="process__step-circle">
+              <!-- Magnifying glass + chart SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="7" y="10" width="2" height="4" rx="0.5" />
+                <rect x="11" y="7" width="2" height="7" rx="0.5" />
+                <rect x="15" y="5" width="2" height="9" rx="0.5" />
+                <circle cx="12" cy="10" r="7" />
+                <line x1="17" y1="15" x2="21" y2="19" />
+              </svg>
             </div>
-            <p class="process__desc">
+            <h3 class="process__step-title">ANÁLISIS</h3>
+            <p class="process__step-desc">
               Estudiamos la empresa en profundidad: su sector, situación financiera y
               potencial antes de hacer ningún compromiso.
             </p>
-          </article>
-          <article class="process__item reveal">
-            <div class="process__item-header">
-              <span class="process__num-sm">02</span>
-              <h3 class="process__title">Estructuración</h3>
-              <div class="process__item-arrow" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
-                </svg>
-              </div>
+          </div>
+
+          <div class="process__step reveal">
+            <span class="process__step-num">02</span>
+            <div class="process__step-circle">
+              <!-- Puzzle pieces SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 14h3a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1-1.5 1.5H4v4h4v-3a1.5 1.5 0 0 1 1.5-1.5v0a1.5 1.5 0 0 1 1.5 1.5v3h4v-4h-3a1.5 1.5 0 0 1-1.5-1.5v0A1.5 1.5 0 0 1 11 14h3" />
+                <path d="M10 4h4v3a1.5 1.5 0 0 0 1.5 1.5v0A1.5 1.5 0 0 0 17 7V4h4v4h-3a1.5 1.5 0 0 0-1.5 1.5v0a1.5 1.5 0 0 0 1.5 1.5h3v4h-4v-3a1.5 1.5 0 0 0-1.5-1.5v0a1.5 1.5 0 0 0-1.5 1.5v3h-4" />
+              </svg>
             </div>
-            <p class="process__desc">
+            <h3 class="process__step-title">ESTRUCTURACIÓN</h3>
+            <p class="process__step-desc">
               Definimos la estructura óptima de la operación, adaptada a los objetivos
               del empresario y a la realidad del negocio.
             </p>
-          </article>
-          <article class="process__item reveal">
-            <div class="process__item-header">
-              <span class="process__num-sm">03</span>
-              <h3 class="process__title">Ejecución</h3>
-              <div class="process__item-arrow" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
-                </svg>
-              </div>
+          </div>
+
+          <div class="process__step reveal">
+            <span class="process__step-num">03</span>
+            <div class="process__step-circle">
+              <!-- Target SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="13" r="9" />
+                <circle cx="11" cy="13" r="6" />
+                <circle cx="11" cy="13" r="3" />
+                <path d="M19 5L12 12" />
+                <path d="M17 3l4 4" />
+                <path d="M19 3h2v2" />
+              </svg>
             </div>
-            <p class="process__desc">
-              Gestionamos el cierre con rigor, discreció y agilidad. Minimizamos la
+            <h3 class="process__step-title">EJECUCIÓN</h3>
+            <p class="process__step-desc">
+              Gestionamos el cierre con rigor, discreción y agilidad. Minimizamos la
               incertidumbre para todas las partes implicadas.
             </p>
-          </article>
-          <article class="process__item reveal">
-            <div class="process__item-header">
-              <span class="process__num-sm">04</span>
-              <h3 class="process__title">Acompañamiento</h3>
-              <div class="process__item-arrow" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
-                </svg>
-              </div>
+          </div>
+
+          <div class="process__step reveal">
+            <span class="process__step-num">04</span>
+            <div class="process__step-circle">
+              <!-- Speech bubble SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 20v-1.5a2.5 2.5 0 0 1 2.5-2.5h3a2.5 2.5 0 0 1 2.5 2.5v1.5" />
+                <circle cx="8" cy="12" r="2.5" />
+                <path d="M11 20v-1.5a2.5 2.5 0 0 1 2.5-2.5h3a2.5 2.5 0 0 1 2.5 2.5v1.5" />
+                <circle cx="15" cy="12" r="2.5" />
+                <path d="M9 4h6a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1l-2 2v-2H9a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+              </svg>
             </div>
-            <p class="process__desc">
+            <h3 class="process__step-title">ACOMPAÑAMIENTO</h3>
+            <p class="process__step-desc">
               Nuestra relación no termina en el cierre. Acompañamos la transición
               para asegurar la continuidad real del negocio.
             </p>
-          </article>
+          </div>
+
         </div>
+
+        <!-- Banner at the bottom -->
+        <div class="process__banner reveal">
+          <div class="process__banner-item">
+            <div class="process__banner-icon">
+              <!-- Shield SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <span class="process__banner-text">Confidencialidad absoluta</span>
+          </div>
+
+          <div class="process__banner-item">
+            <div class="process__banner-icon">
+              <!-- Checkmark circle SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+            </div>
+            <span class="process__banner-text">Enfoque personalizado en cada operación</span>
+          </div>
+
+          <div class="process__banner-item">
+            <div class="process__banner-icon">
+              <!-- Users SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <span class="process__banner-text">Experiencia y criterio independiente</span>
+          </div>
+
+          <div class="process__banner-item">
+            <div class="process__banner-icon">
+              <!-- Trend chart SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 18l6-6 4 4 8-8" />
+                <circle cx="3" cy="18" r="2" />
+                <circle cx="9" cy="12" r="2" />
+                <circle cx="13" cy="16" r="2" />
+                <circle cx="21" cy="8" r="2" />
+              </svg>
+            </div>
+            <span class="process__banner-text">Visión a largo plazo y creación de valor</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -459,73 +542,157 @@
          ================================================ -->
     <section class="section section--light" id="por-que-desmos">
       <div class="container">
-        <div class="section__header">
-          <p class="eyebrow reveal">Por qué Desmos</p>
-          <h2 class="section__title section__title--dark reveal">
-            La diferencia<br>está en el compromiso.
-          </h2>
-          <p class="section__lead section__lead--dark reveal">
-            Un asesor cobra aunque la operación no cierre. Nosotros solo ganamos si la operación
-            funciona. Estamos en el mismo lado de la mesa que el empresario.
-          </p>
+        
+        <!-- Split Header -->
+        <div class="why-desmos__header-split reveal">
+          <div class="why-desmos__header-text">
+            <p class="why-desmos__eyebrow">Por qué Desmos</p>
+            <div class="why-desmos__eyebrow-rule" aria-hidden="true"></div>
+            <h2 class="section__title section__title--dark why-desmos__title">La diferencia está<br>en el compromiso.</h2>
+            <p class="why-desmos__lead">
+              Un asesor cobra aunque la operación no cierre. Nosotros solo ganamos si la operación
+              funciona. Estamos en el mismo lado de la mesa que el empresario.
+            </p>
+          </div>
+          <div class="why-desmos__header-image-wrap">
+            <img src="img/hero.png" alt="Reunión de negocios en oficina" class="why-desmos__header-image">
+          </div>
         </div>
+
+        <!-- Three Cards Grid -->
         <div class="value__grid">
           <article class="value-card reveal">
-            <div class="value-card__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
+            <div class="value-card__badge">
+              <div class="value-card__badge-circle">
+                <!-- Shield SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
             </div>
             <h3 class="value-card__title">Somos el comprador</h3>
+            <div class="value-card__title-rule" aria-hidden="true"></div>
             <p class="value-card__desc">
-              No actuamos como intermediarios. Capital propio en cada operación. Eso nos permite
-              tomar decisiones con agilidad y dar certeza al proceso desde el primer día.
+              No actuamos como intermediarios. Invertimos capital propio en cada operación. Eso nos permite tomar decisiones con agilidad y dar certeza desde el primer día.
             </p>
           </article>
+
           <article class="value-card reveal">
-            <div class="value-card__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-              </svg>
+            <div class="value-card__badge">
+              <div class="value-card__badge-circle">
+                <!-- Chess knight SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 22H5c0-.5.3-1 .8-1.3.5-.3.8-.8.8-1.3V17c0-.5-.3-1-.8-1.3L5 14v-2c0-.5.3-1 .8-1.3L8 9.5c.5-.3.8-.8.8-1.3V7c0-.5-.3-1-.8-1.3L6 4.5c-.5-.3-.8-.8-.8-1.3V2h7.3c.4 0 .8.2 1 .5l2.2 3.3c.2.3.5.5.8.5h2.2c.5 0 .9.4.9.9v3.4c0 .8-.5 1.5-1.2 1.9l-1.6.9c-.5.3-.8.8-.8 1.3V17c0 .5.3 1 .8 1.3l2.2 1.3c.5.3.8.8.8 1.3v1.1H19z" />
+                </svg>
+              </div>
             </div>
             <h3 class="value-card__title">Discreción total</h3>
+            <div class="value-card__title-rule" aria-hidden="true"></div>
             <p class="value-card__desc">
-              Cada proceso se gestiona con la máxima confidencialidad. Respetamos los tiempos
-              y la privacidad del empresario en cada fase.
+              Cada proceso se gestiona con la máxima confidencialidad. Respetamos los tiempos y la privacidad del empresario en cada fase de la operación.
             </p>
           </article>
+
           <article class="value-card reveal">
-            <div class="value-card__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-              </svg>
+            <div class="value-card__badge">
+              <div class="value-card__badge-circle">
+                <!-- Users SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
             </div>
             <h3 class="value-card__title">Alineación de intereses</h3>
+            <div class="value-card__title-rule" aria-hidden="true"></div>
             <p class="value-card__desc">
-              Nuestro éxito depende del éxito de la operación. No cobramos por presentarte
-              compradores. Somos el comprador, y eso lo cambia todo.
+              Nuestro éxito depende del éxito de la operación. No cobramos por presentarte compradores. Somos el comprador, y eso lo cambia todo.
             </p>
           </article>
         </div>
 
-        <!-- Bloc timing / loss aversion -->
-        <div class="timing__block reveal">
-          <div class="timing__text">
-            <p class="timing__eyebrow">Una cosa que vale la pena saber</p>
-            <h3 class="timing__title">El momento de empezar a pensar en esto es antes de que sea urgente.</h3>
-            <p class="timing__desc">
-              Los expertos recomiendan planificar la transición con 12 a 24 meses de antelación.
-              Una empresa bien documentada y ordenada puede valer entre un 30% y un 40% más
-              que una que llega al proceso sin preparación. No porque el negocio valga menos,
-              sino porque la incertidumbre tiene un precio.
-            </p>
+        <!-- Split Timing Block -->
+        <div class="timing__block timing__block--split reveal">
+          <div class="timing__content-wrap">
+            <p class="timing__eyebrow-split">Una cosa que vale la pena saber</p>
+            <div class="timing__eyebrow-rule-split" aria-hidden="true"></div>
+            <h3 class="timing__title-split">El momento de empezar a pensar en esto es antes de que sea urgente.</h3>
+            
+            <!-- Metrics Row inside timing card -->
+            <div class="timing__metrics-grid">
+              
+              <div class="timing__metric-item">
+                <div class="timing__metric-icon">
+                  <!-- Calendar check SVG -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                    <polyline points="9 16 11 18 15 14" />
+                  </svg>
+                </div>
+                <div class="timing__metric-texts">
+                  <span class="timing__metric-val">12–24 meses</span>
+                  <span class="timing__metric-lbl">de planificación recomendada</span>
+                </div>
+              </div>
+
+              <div class="timing__metric-item">
+                <div class="timing__metric-icon">
+                  <!-- Trend chart SVG -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                    <polyline points="17 6 23 6 23 12" />
+                  </svg>
+                </div>
+                <div class="timing__metric-texts">
+                  <span class="timing__metric-val">30–40%</span>
+                  <span class="timing__metric-lbl">más valor en empresas bien preparadas</span>
+                </div>
+              </div>
+
+              <div class="timing__metric-item">
+                <div class="timing__metric-icon">
+                  <!-- Document check SVG -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <polyline points="9 15 11 17 15 13" />
+                  </svg>
+                </div>
+                <div class="timing__metric-texts">
+                  <span class="timing__metric-val">Menos riesgo</span>
+                  <span class="timing__metric-lbl">menor incertidumbre, mejores resultados</span>
+                </div>
+              </div>
+
+              <div class="timing__metric-item">
+                <div class="timing__metric-icon">
+                  <!-- Clock SVG -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </div>
+                <div class="timing__metric-texts">
+                  <span class="timing__metric-val">Decisiones mejores</span>
+                  <span class="timing__metric-lbl">cuando hay tiempo, no presión.</span>
+                </div>
+              </div>
+
+            </div>
+
+            <a href="#contacto" class="btn btn--primary timing__cta-split">Hablemos antes de que sea tarde &nbsp;→</a>
           </div>
-          <a href="#contacto" class="btn btn--primary timing__cta">Hablemos antes de que sea tarde</a>
+
+          <div class="timing__image-wrap">
+            <img src="img/hero2.png" alt="Documentos y gráficos de análisis financiero" class="timing__image">
+          </div>
         </div>
+
       </div>
     </section>
 

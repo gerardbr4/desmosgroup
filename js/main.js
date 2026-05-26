@@ -48,43 +48,28 @@ function renderPortfolio() {
 
   grid.innerHTML = portfolio.map(e => `
     <article class="portfolio-card reveal">
-      ${e.logo
-        ? `<img src="${e.logo}" alt="Logo ${e.nombre}" class="portfolio-card__logo" loading="lazy" decoding="async">`
-        : `<div class="portfolio-card__initial" aria-hidden="true">${e.nombre.charAt(0)}</div>`
-      }
-      <div class="portfolio-card__meta">
-        <span class="portfolio-card__year">${e.año}</span>
-        <span class="portfolio-card__badge">${e.sector}</span>
+      <div class="portfolio-card__img-wrap">
+        ${e.imagen
+          ? `<img src="${e.imagen}" alt="${e.nombre}" class="portfolio-card__img" loading="lazy" decoding="async">`
+          : `<div class="portfolio-card__img-placeholder"></div>`
+        }
+        <div class="portfolio-card__initial" aria-hidden="true">${e.nombre.charAt(0)}</div>
       </div>
-      <h3 class="portfolio-card__name">${e.nombre}</h3>
-      <p class="portfolio-card__tipo">${e.tipo}</p>
-      ${e.descripcion ? `<p class="portfolio-card__desc">${e.descripcion}</p>` : ''}
-      ${e.web ? `
-        <a href="${e.web}" target="_blank" rel="noopener noreferrer" class="portfolio-card__link">
-          Ver empresa
-          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-            aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-        </a>` : ''}
+      <div class="portfolio-card__info">
+        <div class="portfolio-card__meta">
+          <span class="portfolio-card__year">${e.año}</span>
+          <span class="portfolio-card__sector">${e.sector.toUpperCase()}</span>
+        </div>
+        <h3 class="portfolio-card__name">${e.nombre}</h3>
+        <p class="portfolio-card__tipo">${e.tipo}</p>
+      </div>
     </article>
   `).join('');
 
-  // Observar les noves targetes per a l'animació
   grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
-renderPortfolio();
 
-// Spotlight border en portfolio cards
-const portfolioGrid = document.getElementById('portfolio-grid');
-if (portfolioGrid) {
-  portfolioGrid.addEventListener('mousemove', e => {
-    const card = e.target.closest('.portfolio-card');
-    if (!card) return;
-    const rect = card.getBoundingClientRect();
-    card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
-    card.style.setProperty('--my', `${e.clientY - rect.top}px`);
-  });
-}
+renderPortfolio();
 
 // Any actual al footer
 const yearEl = document.getElementById('year');

@@ -15,8 +15,7 @@
 //   sector      → Sector o industria, ej: "Software", "Industria" (obligatorio)
 //   año         → Año de la operación, ej: 2025 (obligatorio)
 //   tipo        → Tipo de operación (obligatorio)
-//   descripcion → Descripción breve (opcional — dejar "" si no hay)
-//   logo        → Ruta al logo, ej: "img/logos/empresa.webp" (opcional — dejar "" si no hay)
+//   imagen      → Ruta a la foto de portada, ej: "img/empresas/empresa.webp" (opcional — dejar "" si no hay)
 //   web         → URL de su web, ej: "https://www.empresa.es" (opcional — dejar "" si no hay)
 //
 // =====================================================
@@ -27,8 +26,7 @@ const portfolio = [
     sector: "Software",
     año: 2025,
     tipo: "Participación mayoritaria",
-    descripcion: "",
-    logo: "",
+    imagen: "https://picsum.photos/seed/sistersoft/600/420",
     web: "",
   },
   {
@@ -36,8 +34,7 @@ const portfolio = [
     sector: "Industria",
     año: 2026,
     tipo: "Participación mayoritaria",
-    descripcion: "",
-    logo: "",
+    imagen: "https://picsum.photos/seed/speedrem26/600/420",
     web: "",
   },
   {
@@ -45,8 +42,7 @@ const portfolio = [
     sector: "Servicios",
     año: 2026,
     tipo: "Adquisición vía reestructuración",
-    descripcion: "",
-    logo: "",
+    imagen: "https://picsum.photos/seed/wallner26/600/420",
     web: "",
   },
 ];
