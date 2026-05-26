@@ -26,7 +26,7 @@ const portfolio = [
     sector: "Software",
     año: 2025,
     tipo: "Participación mayoritaria",
-    imagen: "https://picsum.photos/seed/sistersoft/600/420",
+    imagen: "img/sistersoft.png",
     web: "",
   },
   {
@@ -34,7 +34,7 @@ const portfolio = [
     sector: "Industria",
     año: 2026,
     tipo: "Participación mayoritaria",
-    imagen: "https://picsum.photos/seed/speedrem26/600/420",
+    imagen: "img/speedrem.jpg",
     web: "",
   },
   {
@@ -42,7 +42,7 @@ const portfolio = [
     sector: "Servicios",
     año: 2026,
     tipo: "Adquisición vía reestructuración",
-    imagen: "https://picsum.photos/seed/wallner26/600/420",
+    imagen: "img/wallner.webp",
     web: "",
   },
 ];
