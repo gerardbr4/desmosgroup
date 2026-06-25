@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Cookies | Desmos Group</title>
+  <meta name="description" content="Política de cookies de Desmos Group. Qué cookies utilizamos, para qué y cómo gestionarlas.">
+  <link rel="canonical" href="https://www.desmosgroup.es/cookies.html">
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <style>
+    .legal-hero {
+      background: var(--bg-dark);
+      padding: 7rem 2rem 4rem;
+      text-align: center;
+    }
+    .legal-hero__label {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .legal-hero__title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--text-lt);
+      line-height: 1.2;
+    }
+    .legal-hero__updated {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.45);
+    }
+    .legal-body {
+      background: var(--bg-light);
+      padding: 5rem 2rem 7rem;
+    }
+    .legal-prose {
+      max-width: 780px;
+      margin: 0 auto;
+      color: #2a2a2a;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .legal-prose h2 {
+      font-family: var(--font-heading);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--bg-dark);
+      margin: 3rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent);
+    }
+    .legal-prose h3 {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--bg-dark);
+      margin: 1.8rem 0 0.5rem;
+    }
+    .legal-prose p { margin-bottom: 1rem; }
+    .legal-prose ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+    .legal-prose ul li { margin-bottom: 0.4rem; }
+    .legal-prose a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    .legal-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      margin-bottom: 3rem;
+      transition: gap 0.2s ease;
+    }
+    .legal-back:hover { gap: 0.75rem; }
+
+    /* Taula de cookies */
+    .cookie-table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      border: 1px solid rgba(22,56,56,0.12);
+    }
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      background: #fff;
+    }
+    .cookie-table thead {
+      background: var(--bg-dark);
+      color: var(--text-lt);
+    }
+    .cookie-table th {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .cookie-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(22,56,56,0.07);
+      color: #333;
+      vertical-align: top;
+    }
+    .cookie-table tbody tr:last-child td { border-bottom: none; }
+    .cookie-table tbody tr:hover { background: rgba(196,146,42,0.05); }
+    .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .badge--necessary {
+      background: rgba(22,56,56,0.12);
+      color: var(--bg-dark);
+    }
+    .badge--analytics {
+      background: rgba(196,146,42,0.15);
+      color: #8a6215;
+    }
+    .badge--preferences {
+      background: rgba(100,100,180,0.12);
+      color: #3a3a8a;
+    }
+
+    /* Bloque de gestión */
+    .cookie-manage {
+      background: #fff;
+      border: 1px solid rgba(22,56,56,0.1);
+      border-radius: 12px;
+      padding: 1.5rem 1.8rem;
+      margin: 2rem 0;
+    }
+    .cookie-manage p { margin-bottom: 0.5rem; }
+  </style>
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="img/desmos_logo_hor_negatiu.png" alt="Desmos Group" class="header__logo-img">
+      </a>
+      <nav class="header__nav" id="nav" aria-label="Navegación principal">
+        <ul class="header__nav-list">
+          <li><a href="index.html#quienes-somos" class="header__nav-link">Quiénes somos</a></li>
+          <li><a href="index.html#que-hacemos" class="header__nav-link">Qué hacemos</a></li>
+          <li><a href="index.html#como-trabajamos" class="header__nav-link">Cómo trabajamos</a></li>
+          <li><a href="index.html#empresas" class="header__nav-link">Empresas</a></li>
+          <li><a href="index.html#contacto" class="header__nav-link header__nav-link--cta">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="header__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="legal-hero">
+      <p class="legal-hero__label">Información legal</p>
+      <h1 class="legal-hero__title">Política de Cookies</h1>
+      <p class="legal-hero__updated">Última actualización: junio de 2025</p>
+    </section>
+
+    <section class="legal-body">
+      <div class="legal-prose">
+
+        <a href="index.html" class="legal-back">← Volver al inicio</a>
+
+        <p>Esta Política de Cookies explica qué son las cookies, qué tipos utilizamos en el sitio web <strong>www.desmosgroup.es</strong>, con qué finalidad y cómo puede gestionarlas. Se aplica en cumplimiento de la Directiva 2002/58/CE sobre privacidad en las comunicaciones electrónicas, el Reglamento (UE) 2016/679 (RGPD) y la Ley 34/2002, de Servicios de la Sociedad de la Información (LSSI-CE).</p>
+
+        <h2>1. ¿Qué son las cookies?</h2>
+        <p>Las cookies son pequeños archivos de texto que los sitios web almacenan en el dispositivo del usuario (ordenador, tablet, smartphone) cuando este los visita. Permiten que el sitio web recuerde información sobre su visita —como el idioma preferido o el estado de la sesión— lo que puede facilitar su próxima visita y hacer el sitio más útil.</p>
+        <p>Además de cookies, pueden utilizarse otras tecnologías similares como <em>local storage</em>, <em>session storage</em> o píxeles de seguimiento. Esta política se aplica a todas ellas.</p>
+
+        <h2>2. Tipos de cookies según su finalidad</h2>
+
+        <h3>Cookies estrictamente necesarias</h3>
+        <p>Son imprescindibles para que el sitio web funcione correctamente. Sin ellas, servicios como la navegación o el acceso a áreas seguras no serían posibles. No requieren consentimiento.</p>
+
+        <h3>Cookies de preferencias o funcionalidad</h3>
+        <p>Permiten recordar preferencias del usuario, como el idioma o la región seleccionada, para ofrecer una experiencia más personalizada.</p>
+
+        <h3>Cookies analíticas o de medición</h3>
+        <p>Recopilan información sobre cómo los usuarios usan el sitio web —páginas visitadas, tiempo de permanencia, errores— con el objetivo de mejorar el funcionamiento del sitio. Los datos se procesan de forma agregada y anónima o pseudónima.</p>
+
+        <h3>Cookies de marketing o publicidad</h3>
+        <p>Registran la actividad de navegación del usuario para crear perfiles y mostrar publicidad relevante. En este momento, <strong>Desmos Group no utiliza cookies de marketing</strong>.</p>
+
+        <h2>3. Cookies que utilizamos</h2>
+
+        <div class="cookie-table-wrap">
+          <table class="cookie-table">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Proveedor</th>
+                <th>Tipo</th>
+                <th>Duración</th>
+                <th>Finalidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>cookie_consent</code></td>
+                <td>Desmos Group</td>
+                <td><span class="badge badge--necessary">Necesaria</span></td>
+                <td>1 año</td>
+                <td>Almacena las preferencias de consentimiento del usuario sobre el uso de cookies.</td>
+              </tr>
+              <tr>
+                <td><code>_ga</code></td>
+                <td>Google Analytics</td>
+                <td><span class="badge badge--analytics">Analítica</span></td>
+                <td>2 años</td>
+                <td>Distingue a usuarios únicos para el análisis de tráfico web.</td>
+              </tr>
+              <tr>
+                <td><code>_ga_XXXXXXXX</code></td>
+                <td>Google Analytics</td>
+                <td><span class="badge badge--analytics">Analítica</span></td>
+                <td>2 años</td>
+                <td>Mantiene el estado de la sesión para Google Analytics 4.</td>
+              </tr>
+              <tr>
+                <td><code>_gid</code></td>
+                <td>Google Analytics</td>
+                <td><span class="badge badge--analytics">Analítica</span></td>
+                <td>24 horas</td>
+                <td>Distingue usuarios para el análisis estadístico de la sesión actual.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><em>Esta tabla se actualizará siempre que se añadan, modifiquen o eliminen cookies del sitio web.</em></p>
+
+        <h2>4. Cookies de terceros</h2>
+        <p>Algunas cookies son instaladas por terceros proveedores de servicios que actúan bajo las instrucciones de Desmos Group. En particular:</p>
+        <ul>
+          <li><strong>Google Analytics (Google LLC):</strong> Herramienta de análisis estadístico del tráfico. Los datos se procesan en servidores de Google, que puede estar situados fuera del Espacio Económico Europeo. Google Analytics aplica la anonimización de IP cuando está activada. Puede consultar la política de privacidad de Google en <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> y optar por no ser rastreado mediante el <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">complemento de inhabilitación de Google Analytics</a>.</li>
+        </ul>
+
+        <h2>5. Base jurídica para el uso de cookies</h2>
+        <ul>
+          <li><strong>Cookies estrictamente necesarias:</strong> Interés legítimo (art. 6.1.f RGPD) / exentas de consentimiento conforme al art. 22.2 LSSI-CE.</li>
+          <li><strong>Cookies analíticas y de preferencias:</strong> Consentimiento del usuario (art. 6.1.a RGPD), prestado mediante el panel de preferencias de cookies que se muestra en la primera visita.</li>
+        </ul>
+        <p>El consentimiento es libre, específico, informado, inequívoco y revocable en cualquier momento.</p>
+
+        <h2>6. Cómo gestionar y revocar el consentimiento</h2>
+
+        <div class="cookie-manage">
+          <p><strong>Panel de preferencias de cookies</strong></p>
+          <p>Puede revisar y cambiar sus preferencias en cualquier momento haciendo clic en el enlace "Gestionar cookies" que encontrará en el pie de página.</p>
+        </div>
+
+        <h3>Configuración del navegador</h3>
+        <p>También puede configurar su navegador para bloquear o eliminar cookies. Tenga en cuenta que esto puede afectar al funcionamiento de algunas partes del sitio web. A continuación encontrará los enlaces a las instrucciones de los navegadores más comunes:</p>
+        <ul>
+          <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+          <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+          <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+          <li><a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">Microsoft Edge</a></li>
+        </ul>
+
+        <h3>Herramientas de opt-out de terceros</h3>
+        <ul>
+          <li><strong>Google Analytics:</strong> <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Complemento de inhabilitación del navegador</a></li>
+          <li><strong>Redes publicitarias:</strong> <a href="https://www.youronlinechoices.eu/" target="_blank" rel="noopener">Your Online Choices</a></li>
+        </ul>
+
+        <h2>7. Transferencias internacionales</h2>
+        <p>El uso de Google Analytics implica la transferencia de datos a Google LLC (EE.UU.). Esta transferencia se ampara en las Cláusulas Contractuales Tipo aprobadas por la Comisión Europea y en el Marco UE-EE.UU. de Privacidad de Datos (<em>EU-U.S. Data Privacy Framework</em>). Google se encuentra adherido a dicho marco, tal y como puede consultarse en el <a href="https://www.dataprivacyframework.gov/" target="_blank" rel="noopener">Data Privacy Framework Program</a>.</p>
+
+        <h2>8. Actualizaciones de esta política</h2>
+        <p>Desmos Group puede actualizar esta Política de Cookies cuando instale nuevas cookies, elimine las existentes o cambie sus proveedores de servicios. Cualquier cambio relevante se notificará mostrando de nuevo el panel de preferencias de cookies.</p>
+        <p>Para cualquier consulta relativa a esta política, puede contactar con nosotros en <span style="background:rgba(196,146,42,.15);border:1px dashed #C4922A;border-radius:3px;padding:0 4px;font-style:italic;color:#8a6215">[EMAIL DE CONTACTO]</span>.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">Desmos Group</span>
+        <p class="footer__tagline">Conectando empresas con su siguiente etapa</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="index.html#quienes-somos">Quiénes somos</a>
+        <a href="index.html#que-hacemos">Qué hacemos</a>
+        <a href="index.html#como-trabajamos">Cómo trabajamos</a>
+        <a href="index.html#empresas">Empresas</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+      <div class="footer__legal">
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+    <div class="container">
+      <p class="footer__copy">
+        © <span id="year"></span> Desmos Group. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

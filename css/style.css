@@ -765,11 +765,29 @@ body {
 .service-card {
   background: var(--bg-card);
   padding: clamp(2rem, 4vw, 3rem);
-  transition: background var(--t);
+  position: relative;
+  transition: background 0.35s ease;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .service-card:hover {
-  background: #161F30;
+  background: #1C5050;
+}
+
+.service-card:hover::after {
+  transform: scaleY(1);
 }
 
 .service-card__icon {
@@ -784,6 +802,12 @@ body {
   margin-bottom: 1.75rem;
   color: var(--accent);
   flex-shrink: 0;
+  transition: background 0.35s ease, border-color 0.35s ease;
+}
+
+.service-card:hover .service-card__icon {
+  background: rgba(196, 146, 42, 0.2);
+  border-color: rgba(196, 146, 42, 0.5);
 }
 
 .service-card__more {

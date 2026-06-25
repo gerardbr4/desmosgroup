@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#163838"/>
+  <circle cx="200" cy="200" r="130" fill="#0d2828"/>
+  <circle cx="200" cy="200" r="130" fill="none" stroke="#C4922A" stroke-width="6"/>
+  <text
+    x="200"
+    y="200"
+    dominant-baseline="central"
+    text-anchor="middle"
+    font-family="Georgia, 'Palatino Linotype', Palatino, serif"
+    font-size="172"
+    font-weight="normal"
+    fill="#C4922A">&#8364;</text>
+</svg>
