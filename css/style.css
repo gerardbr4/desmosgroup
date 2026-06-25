@@ -229,7 +229,7 @@ body {
 }
 
 .header__logo-img {
-  height: 28px;
+  height: 38px;
   width: auto;
   display: block;
   transition: opacity var(--t);
@@ -401,7 +401,7 @@ body {
 }
 
 .hero__logo {
-  height: 90px;
+  height: 180px;
   width: auto;
   display: block;
   margin-bottom: 2rem;
