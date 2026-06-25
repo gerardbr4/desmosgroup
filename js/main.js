@@ -41,35 +41,7 @@ function observeAll() {
 }
 observeAll();
 
-// Renderitza el portfolio des de portfolio.js
-function renderPortfolio() {
-  const grid = document.getElementById('portfolio-grid');
-  if (!grid || typeof portfolio === 'undefined' || !portfolio.length) return;
-
-  grid.innerHTML = portfolio.map(e => `
-    <article class="portfolio-card reveal">
-      <div class="portfolio-card__img-wrap">
-        ${e.imagen
-          ? `<img src="${e.imagen}" alt="${e.nombre}" class="portfolio-card__img" loading="lazy" decoding="async">`
-          : `<div class="portfolio-card__img-placeholder"></div>`
-        }
-        <div class="portfolio-card__initial" aria-hidden="true">${e.nombre.charAt(0)}</div>
-      </div>
-      <div class="portfolio-card__info">
-        <div class="portfolio-card__meta">
-          <span class="portfolio-card__year">${e.año}</span>
-          <span class="portfolio-card__sector">${e.sector.toUpperCase()}</span>
-        </div>
-        <h3 class="portfolio-card__name">${e.nombre}</h3>
-        <p class="portfolio-card__tipo">${e.tipo}</p>
-      </div>
-    </article>
-  `).join('');
-
-  grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-}
-
-renderPortfolio();
+loadPortfolio();
 
 // Any actual al footer
 const yearEl = document.getElementById('year');

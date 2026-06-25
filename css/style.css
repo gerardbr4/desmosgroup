@@ -1,4 +1,4 @@
-/* =====================================================
+﻿/* =====================================================
    DESMOS GROUP — Styles
    ===================================================== */
 
@@ -313,7 +313,7 @@ body {
   position: absolute;
   inset: 0;
   /* 1) Imatge de fons */
-  background-image: url('../img/hero2.png');
+  background-image: url('../img/hero2.webp');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -1025,7 +1025,7 @@ body {
 .empresas__parallax-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../img/bg_img.png');
+  background-image: url('../img/bg_img.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1157,6 +1157,32 @@ body {
   line-height: 1.5;
 }
 
+.portfolio-card__estado {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  border-radius: 4px;
+  border: 1px solid;
+}
+.portfolio-card__estado--activa    { color: #4caf82; border-color: rgba(76,175,130,0.4); }
+.portfolio-card__estado--en-proceso { color: #c49226; border-color: rgba(196,146,38,0.4); }
+.portfolio-card__estado--potencial { color: #7a8faa; border-color: rgba(122,143,170,0.4); }
+
+.portfolio-card__web {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: opacity 0.2s;
+}
+.portfolio-card__web:hover { opacity: 0.75; }
+
 /* =====================================================
    POR QUÉ DESMOS (MODIFICADO - ESTILO IMAGEN)
    ===================================================== */
@@ -1168,7 +1194,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../img/hero.png');
+  background-image: url('../img/hero.webp');
   background-size: cover;
   background-position: center 30%;
   background-repeat: no-repeat;

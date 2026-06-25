@@ -1,48 +1,49 @@
-// =====================================================
-// EMPRESAS PARTICIPADAS — EDITABLE POR EL CLIENTE
-// =====================================================
-//
-// INSTRUCCIONES PARA AÑADIR UNA EMPRESA NUEVA:
-//
-// 1. Copia el bloque { ... } de cualquier empresa de abajo.
-// 2. Pégalo al final de la lista, justo antes del corchete ];
-//    (añade una coma después del bloque anterior).
-// 3. Rellena los campos con la información de la nueva empresa.
-// 4. Guarda este archivo y recarga la web. ¡Listo!
-//
-// CAMPOS DISPONIBLES:
-//   nombre      → Nombre de la empresa (obligatorio)
-//   sector      → Sector o industria, ej: "Software", "Industria" (obligatorio)
-//   año         → Año de la operación, ej: 2025 (obligatorio)
-//   tipo        → Tipo de operación (obligatorio)
-//   imagen      → Ruta a la foto de portada, ej: "img/empresas/empresa.webp" (opcional — dejar "" si no hay)
-//   web         → URL de su web, ej: "https://www.empresa.es" (opcional — dejar "" si no hay)
-//
-// =====================================================
+async function loadPortfolio() {
+  const grid = document.getElementById('portfolio-grid');
+  if (!grid) return;
 
-const portfolio = [
-  {
-    nombre: "Sister Soft S.L.",
-    sector: "Software",
-    año: 2025,
-    tipo: "Participación mayoritaria",
-    imagen: "img/sistersoft.png",
-    web: "",
-  },
-  {
-    nombre: "Remolques Speedrem",
-    sector: "Industria",
-    año: 2026,
-    tipo: "Participación mayoritaria",
-    imagen: "img/speedrem.jpg",
-    web: "",
-  },
-  {
-    nombre: "Wallner Group",
-    sector: "Servicios",
-    año: 2026,
-    tipo: "Adquisición vía reestructuración",
-    imagen: "img/wallner.webp",
-    web: "",
-  },
-];
+  try {
+    const res = await fetch(
+      'https://desmosgroup.com/wp-json/wp/v2/empresa?_embed&per_page=100&orderby=date&order=desc'
+    );
+    if (!res.ok) throw new Error(res.status);
+    const empresas = await res.json();
+    if (!empresas.length) return;
+
+    grid.innerHTML = empresas.map(e => {
+      const nombre     = e.title.rendered;
+      const sector     = e.acf?.sector     || '';
+      const estado     = e.acf?.estado     || '';
+      const descripcion = e.acf?.descripcion || '';
+      const web        = e.acf?.web        || '';
+      const año        = new Date(e.date).getFullYear();
+      const imagen     = e._embedded?.['wp:featuredmedia']?.[0]?.source_url || '';
+
+      return `
+        <article class="portfolio-card reveal">
+          <div class="portfolio-card__img-wrap">
+            ${imagen
+              ? `<img src="${imagen}" alt="${nombre}" class="portfolio-card__img" loading="lazy" decoding="async">`
+              : `<div class="portfolio-card__img-placeholder"></div>`
+            }
+            <div class="portfolio-card__initial" aria-hidden="true">${nombre.charAt(0)}</div>
+          </div>
+          <div class="portfolio-card__info">
+            <div class="portfolio-card__meta">
+              <span class="portfolio-card__year">${año}</span>
+              ${sector ? `<span class="portfolio-card__sector">${sector.toUpperCase()}</span>` : ''}
+              ${estado ? `<span class="portfolio-card__estado portfolio-card__estado--${estado.toLowerCase().replace(/\s+/g, '-')}">${estado}</span>` : ''}
+            </div>
+            <h3 class="portfolio-card__name">${nombre}</h3>
+            ${descripcion ? `<p class="portfolio-card__tipo">${descripcion}</p>` : ''}
+            ${web ? `<a href="${web}" class="portfolio-card__web" target="_blank" rel="noopener noreferrer">Visitar web →</a>` : ''}
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  } catch (err) {
+    console.error('Error cargando empresas:', err);
+  }
+}

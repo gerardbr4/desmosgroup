@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /empresa/
+Disallow: /feed/
+Disallow: /page/
+Disallow: /author/
+Disallow: /category/
+Disallow: /tag/
+Disallow: /?p=
+Disallow: /?page_id=
+Disallow: /wp-login.php
+Allow: /wp-admin/admin-ajax.php
+Allow: /wp-json/
+
+Sitemap: https://desmosgroup.com/wp-sitemap.xml
