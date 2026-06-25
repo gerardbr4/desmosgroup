@@ -4,19 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0C1B33">
+  <meta name="theme-color" content="#163838">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <title>Desmos Group | Adquisición de empresas y asesoramiento M&A</title>
   <meta name="description"
     content="Desmos Group compra empresas consolidadas con capital propio. Especialistas en transición empresarial y relevo generacional en España. Discreción, rigor y visión a largo plazo.">
-  <link rel="canonical" href="https://www.desmosgroup.es/">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.desmosgroup.com/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.desmosgroup.es/">
+  <meta property="og:url" content="https://www.desmosgroup.com/">
   <meta property="og:title" content="Desmos Group | Adquisición de empresas">
   <meta property="og:description"
     content="Compramos empresas consolidadas con capital propio. Sin intermediarios. Con un compromiso real de continuidad.">
-  <meta property="og:image" content="https://www.desmosgroup.es/img/og-image.webp">
+  <meta property="og:image" content="https://www.desmosgroup.com/img/og-image.webp">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Desmos Group">
 
@@ -25,18 +30,31 @@
   <meta name="twitter:title" content="Desmos Group | Adquisición de empresas">
   <meta name="twitter:description"
     content="Compramos empresas consolidadas con capital propio. Sin intermediarios. Con un compromiso real de continuidad.">
-  <meta name="twitter:image" content="https://www.desmosgroup.es/img/og-image.webp">
+  <meta name="twitter:image" content="https://www.desmosgroup.com/img/og-image.webp">
 
   <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "FinancialService"],
     "name": "Desmos Group",
-    "description": "Firma independiente especializada en adquisición de empresas y transición empresarial en España. Capital propio, sin intermediarios.",
-    "url": "https://www.desmosgroup.es",
-    "areaServed": "ES",
-    "knowsAbout": ["Adquisición de empresas", "M&A", "Transición empresarial", "Relevo generacional", "Capital propio"]
+    "description": "Firma independiente especializada en adquisición y compra de empresas consolidadas en España. Capital propio, sin intermediarios, con compromiso real de continuidad.",
+    "url": "https://www.desmosgroup.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.desmosgroup.com/img/desmos_logo.webp"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "España"
+    },
+    "knowsAbout": ["Adquisición de empresas", "Compra de empresas", "M&A", "Fusiones y adquisiciones", "Transición empresarial", "Relevo generacional", "Capital propio"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "url": "https://www.desmosgroup.com/#contacto",
+      "availableLanguage": "Spanish"
+    }
   }
   </script>
 
@@ -47,6 +65,7 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap"
     rel="stylesheet">
 
+  <link rel="preload" as="image" href="img/hero2.webp" fetchpriority="high">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
@@ -59,7 +78,7 @@
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#inicio" class="header__logo">
-        <img src="img/desmos_logo_hor_negatiu.webp" alt="Desmos Group" class="header__logo-img">
+        <img src="img/desmos_logo_hor_negatiu.webp" alt="Desmos Group" class="header__logo-img" width="1000" height="268">
       </a>
       <nav class="header__nav" id="nav" aria-label="Navegación principal">
         <ul class="header__nav-list">
@@ -86,8 +105,8 @@
       <div class="hero__grid" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div class="hero__text">
-          <img src="img/desmos_logo_negatiu.webp" alt="Desmos Group" class="hero__logo">
-          <p class="hero__eyebrow reveal">Firma independiente · Adquisición de empresas en España</p>
+          <img src="img/desmos_logo_negatiu.webp" alt="Desmos Group" class="hero__logo" width="1000" height="850">
+          <p class="hero__eyebrow reveal">Firma independiente · Adquisición y compra de empresas consolidadas en España</p>
           <h1 class="hero__title reveal">La empresa que construiste merece un futuro a su altura.</h1>
           <p class="hero__subtitle reveal">
             Compramos empresas consolidadas con capital propio. Sin intermediarios.
@@ -594,7 +613,7 @@
             </p>
           </div>
           <div class="why-desmos__header-image-wrap">
-            <img src="img/draw_transparent.webp" alt="Reunión de negocios en oficina" class="why-desmos__header-image">
+            <img src="img/draw_transparent.webp" alt="Reunión de negocios en oficina" class="why-desmos__header-image" width="1536" height="1024">
           </div>
         </div>
 
@@ -739,7 +758,7 @@
           </div>
 
           <div class="timing__image-wrap">
-            <img src="img/hero2.webp" alt="Documentos y gráficos de análisis financiero" class="timing__image">
+            <img src="img/hero2.webp" alt="Documentos y gráficos de análisis financiero" class="timing__image" width="1717" height="916">
           </div>
         </div>
 
@@ -796,7 +815,7 @@
               </div>
               <div class="form__group">
                 <label for="mensaje" class="form__label">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" class="form__input form__textarea" rows="5" required
+                <textarea id="mensaje" name="mensaje" class="form__input form__textarea" rows="5"
                   placeholder="Cuéntanos brevemente tu situación. Todo es confidencial."></textarea>
               </div>
               <div class="form__check">
@@ -805,7 +824,8 @@
                   Acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>
                 </label>
               </div>
-              <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
+              <button type="submit" class="btn btn--primary btn--full">Solicitar conversación confidencial</button>
+              <p class="form__guarantee">Respondemos en menos de 24h. Todo es confidencial.</p>
               <p class="form__success" id="form-success" hidden>
                 Mensaje recibido. Nos pondremos en contacto contigo en las próximas 24 horas.
               </p>

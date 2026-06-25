@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Disallow: /wp-admin/
 Disallow: /empresa/
 Disallow: /feed/
@@ -12,4 +12,5 @@ Disallow: /wp-login.php
 Allow: /wp-admin/admin-ajax.php
 Allow: /wp-json/
 
+Sitemap: https://www.desmosgroup.com/sitemap.xml
 Sitemap: https://desmosgroup.com/wp-sitemap.xml
