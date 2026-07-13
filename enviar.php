@@ -1,13 +1,14 @@
 <?php
 // ============================================================
 // DESMOS GROUP — Formulari de contacte
-// Substitueix RECAPTCHA_SECRET_KEY per la teva clau secreta
+// Credencials a config.php (fora del repositori git)
 // ============================================================
 
-define('RECAPTCHA_SECRET', '6Ldts1EtAAAAAFkGTa1-XLXCKtQkcowfHaDCqm-b');
-define('DEST_EMAIL',       'idiaz@desmosgroup.com');
-define('FROM_EMAIL',       'idiaz@desmosgroup.com');
-define('ALLOWED_ORIGIN',   'https://www.desmosgroup.com');
+require_once __DIR__ . '/config.php';
+
+define('DEST_EMAIL',     'idiaz@desmosgroup.com');
+define('FROM_EMAIL',     'idiaz@desmosgroup.com');
+define('ALLOWED_ORIGIN', 'https://www.desmosgroup.com');
 
 // Capçaleres
 header('Content-Type: application/json; charset=utf-8');
@@ -29,14 +30,40 @@ if (empty($token)) {
     exit;
 }
 
-$verify = @file_get_contents(
-    'https://www.google.com/recaptcha/api/siteverify'
-    . '?secret='   . urlencode(RECAPTCHA_SECRET)
-    . '&response=' . urlencode($token)
-    . '&remoteip=' . urlencode($_SERVER['REMOTE_ADDR'] ?? '')
-);
-$result = json_decode($verify, true);
-if (empty($result['success'])) {
+function verifyRecaptcha(string $token, string $secret, string $ip): bool {
+    $params = http_build_query([
+        'secret'   => $secret,
+        'response' => $token,
+        'remoteip' => $ip,
+    ]);
+    $url = 'https://www.google.com/recaptcha/api/siteverify';
+
+    if (function_exists('curl_init')) {
+        $ch = curl_init($url);
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST           => true,
+            CURLOPT_POSTFIELDS     => $params,
+            CURLOPT_TIMEOUT        => 10,
+        ]);
+        $body = curl_exec($ch);
+        curl_close($ch);
+    } else {
+        $ctx  = stream_context_create(['http' => [
+            'method'  => 'POST',
+            'header'  => 'Content-Type: application/x-www-form-urlencoded',
+            'content' => $params,
+            'timeout' => 10,
+        ]]);
+        $body = @file_get_contents($url, false, $ctx);
+    }
+
+    if (!$body) return false;
+    $result = json_decode($body, true);
+    return !empty($result['success']);
+}
+
+if (!verifyRecaptcha($token, RECAPTCHA_SECRET, $_SERVER['REMOTE_ADDR'] ?? '')) {
     http_response_code(400);
     echo json_encode(['error' => 'reCAPTCHA invàlid']);
     exit;
