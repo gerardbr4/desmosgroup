@@ -66,6 +66,7 @@
     rel="stylesheet">
 
   <link rel="preload" as="image" href="img/hero2.webp" fetchpriority="high">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
@@ -787,12 +788,12 @@
 
           <div class="contact__form-wrap reveal">
             <!-- Substituir XXXXXXXX pel codi real de Formspree -->
-            <form class="contact__form" id="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST"
+            <form class="contact__form" id="contact-form" action="enviar.php" method="POST"
               novalidate>
               <div class="form__row">
                 <div class="form__group">
                   <label for="nombre" class="form__label">Nombre</label>
-                  <input type="text" id="nombre" name="nombre" class="form__input" required autocomplete="name"
+                  <input type="text" id="nombre" name="nombre" class="form__input" autocomplete="name"
                     placeholder="Tu nombre">
                 </div>
                 <div class="form__group">
@@ -815,7 +816,7 @@
               </div>
               <div class="form__group">
                 <label for="mensaje" class="form__label">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" class="form__input form__textarea" rows="5"
+                <textarea id="mensaje" name="mensaje" class="form__input form__textarea" rows="5" required
                   placeholder="Cuéntanos brevemente tu situación. Todo es confidencial."></textarea>
               </div>
               <div class="form__check">
@@ -824,7 +825,10 @@
                   Acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>
                 </label>
               </div>
-              <button type="submit" class="btn btn--primary btn--full">Solicitar conversación confidencial</button>
+              <div class="form__recaptcha">
+                <div class="g-recaptcha" data-sitekey="6Ldts1EtAAAAABi6IlolM50puqRF5RwnRHpWNgKT" data-theme="dark"></div>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full">Solicitar conversación</button>
               <p class="form__guarantee">Respondemos en menos de 24h. Todo es confidencial.</p>
               <p class="form__success" id="form-success" hidden>
                 Mensaje recibido. Nos pondremos en contacto contigo en las próximas 24 horas.
@@ -859,6 +863,7 @@
         <a href="privacidad.html">Privacidad</a>
         <a href="cookies.html">Cookies</a>
       </div>
+      <button id="manage-cookies" class="footer__manage-cookies">Gestionar cookies</button>
     </div>
     <div class="container">
       <p class="footer__copy">
@@ -867,8 +872,139 @@
     </div>
   </footer>
 
+  <!-- Cookie Preferences Modal -->
+  <div id="cookie-modal" class="cookie-modal" hidden role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+    <div class="cookie-modal__box">
+      <h3 class="cookie-modal__title" id="cookie-modal-title">Gestionar preferencias de cookies</h3>
+      <p class="cookie-modal__intro">Activa o desactiva cada categoría. Las cookies necesarias no pueden desactivarse.</p>
+
+      <div class="cookie-pref">
+        <div class="cookie-pref__row">
+          <div class="cookie-pref__info">
+            <span class="cookie-pref__name">Cookies necesarias</span>
+            <span class="cookie-pref__desc">Imprescindibles para el funcionamiento del sitio. Guardan tu preferencia de cookies (<code>cookie_consent</code>).</span>
+          </div>
+          <label class="cookie-toggle cookie-toggle--locked" aria-label="Siempre activas">
+            <input type="checkbox" checked disabled>
+            <span class="cookie-toggle__slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="cookie-pref">
+        <div class="cookie-pref__row">
+          <div class="cookie-pref__info">
+            <span class="cookie-pref__name">Cookies analíticas</span>
+            <span class="cookie-pref__desc">Google Analytics: nos ayudan a entender cómo se navega por el sitio (<code>_ga</code>, <code>_ga_X5V8DPQ030</code>, <code>_gid</code>).</span>
+          </div>
+          <label class="cookie-toggle" aria-label="Cookies analíticas">
+            <input type="checkbox" id="toggle-analytics">
+            <span class="cookie-toggle__slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="cookie-modal__actions">
+        <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookie-modal-save">Guardar preferencias</button>
+      </div>
+    </div>
+    <div class="cookie-modal__backdrop" id="cookie-modal-backdrop"></div>
+  </div>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner" hidden>
+    <div class="cookie-banner__inner container">
+      <p class="cookie-banner__text">
+        Utilizamos <strong>Google Analytics</strong> para analizar el uso del sitio web y mejorar la experiencia. Puede aceptar o rechazar estas cookies no esenciales.
+        <a href="cookies.html" rel="noopener">Política de cookies</a>
+      </p>
+      <div class="cookie-banner__actions">
+        <button class="cookie-banner__btn cookie-banner__btn--reject" id="cookie-manage">Gestionar cookies</button>
+        <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookie-accept">Aceptar todo</button>
+      </div>
+    </div>
+  </div>
+
   <script src="js/portfolio.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var GA_ID = 'G-X5V8DPQ030';
+      var KEY = 'cookie_consent';
+      var gaLoaded = false;
+
+      function loadGA() {
+        if (gaLoaded) return;
+        gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      }
+
+      function hideBanner() {
+        document.getElementById('cookie-banner').setAttribute('hidden', '');
+      }
+
+      function showModal() {
+        document.getElementById('toggle-analytics').checked = (localStorage.getItem(KEY) === 'accepted');
+        document.getElementById('cookie-modal').removeAttribute('hidden');
+      }
+
+      function hideModal() {
+        document.getElementById('cookie-modal').setAttribute('hidden', '');
+      }
+
+      // On load: apply saved preference
+      var consent = localStorage.getItem(KEY);
+      if (consent === 'accepted') {
+        loadGA();
+      } else if (!consent) {
+        document.getElementById('cookie-banner').removeAttribute('hidden');
+      }
+
+      // Banner: accept all
+      document.getElementById('cookie-accept').addEventListener('click', function () {
+        localStorage.setItem(KEY, 'accepted');
+        hideBanner();
+        loadGA();
+      });
+
+      // Banner: manage → open modal
+      document.getElementById('cookie-manage').addEventListener('click', function () {
+        showModal();
+      });
+
+      // Modal: save preferences
+      document.getElementById('cookie-modal-save').addEventListener('click', function () {
+        if (document.getElementById('toggle-analytics').checked) {
+          localStorage.setItem(KEY, 'accepted');
+          loadGA();
+        } else {
+          localStorage.setItem(KEY, 'rejected');
+        }
+        hideModal();
+        hideBanner();
+      });
+
+      // Modal: close on backdrop click
+      document.getElementById('cookie-modal-backdrop').addEventListener('click', hideModal);
+
+      // Footer: "Gestionar cookies" → open modal directly
+      var footerBtn = document.getElementById('manage-cookies');
+      if (footerBtn) {
+        footerBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          showModal();
+        });
+      }
+    })();
+  </script>
 </body>
 
 </html>

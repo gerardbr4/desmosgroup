@@ -53,6 +53,17 @@ const success = document.getElementById('form-success');
 if (form) {
   form.addEventListener('submit', async e => {
     e.preventDefault();
+
+    // Validar reCAPTCHA
+    if (typeof grecaptcha !== 'undefined' && !grecaptcha.getResponse()) {
+      const rc = form.querySelector('.form__recaptcha');
+      if (rc) {
+        rc.classList.add('form__recaptcha--error');
+        setTimeout(() => rc.classList.remove('form__recaptcha--error'), 3000);
+      }
+      return;
+    }
+
     const btn = form.querySelector('button[type="submit"]');
     const original = btn.textContent;
     btn.textContent = 'Enviando...';
@@ -65,19 +76,21 @@ if (form) {
       });
       if (res.ok) {
         form.reset();
+        if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
         if (success) {
           success.hidden = false;
           success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
       } else {
+        if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
         btn.textContent = 'Error al enviar. Inténtalo de nuevo.';
         btn.disabled = false;
       }
     } catch {
+      if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
       btn.textContent = 'Error al enviar. Inténtalo de nuevo.';
       btn.disabled = false;
     }
-    // Restaurar botó si hi ha error
     if (btn.disabled && btn.textContent !== original) {
       setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 4000);
     }
