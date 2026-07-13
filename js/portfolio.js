@@ -1,6 +1,7 @@
 async function loadPortfolio() {
   const grid = document.getElementById('portfolio-grid');
   if (!grid) return;
+  if (grid.children.length > 0) return; // Ja renderitzat server-side per PHP
 
   try {
     const res = await fetch(
